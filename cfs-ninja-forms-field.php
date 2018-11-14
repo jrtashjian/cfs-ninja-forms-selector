@@ -18,16 +18,17 @@ class cfs_ninja_forms_field extends cfs_field {
 			return;
 		}
 
-		$ninja_forms_listing = Ninja_Forms()->forms()->get_all();
+		$ninja_forms_listing = Ninja_Forms()->form()->get_forms();
 		?>
 
 		<select name="<?php esc_attr_e( $field->input_name ); ?>" name="<?php esc_attr_e( $field->input_class ); ?>">
 			<option value="0">None</option>
 
 			<?php // Output available forms as options
-			foreach ( $ninja_forms_listing as $form_id ) :
-				$form_title = Ninja_Forms()->form( $form_id )->get_setting( 'form_title' );
-				$selected = in_array( $form_id, (array) $field->value ) ? ' selected' : '';
+			foreach ( $ninja_forms_listing as $form ) :
+				$form_id = $form->get_id();
+				$form_title = $form->get_setting( 'title' );
+				$selected = in_array( $form_id, (array) $field->value, true ) ? ' selected' : '';
 				?>
 
 				<option value="<?php esc_attr_e( $form_id ); ?>"<?php echo $selected; ?>><?php esc_attr_e( $form_title ); ?></option>
