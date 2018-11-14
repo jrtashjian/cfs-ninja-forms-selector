@@ -2,7 +2,7 @@
 Contributors: jrtashjian
 Tags: cfs, Custom Field Suite, field type, ninja forms,
 Requires at least: 3.9
-Tested up to: 4.3
+Tested up to: 4.9.8
 Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,5 +21,8 @@ Generates an admin-facing select box for selecting a form from Ninja Forms and o
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+*  Fixing an issue with how the select input is populated with the latest versions of Ninja Forms.
+
+= 1.0.0 =
 *  Initial release!

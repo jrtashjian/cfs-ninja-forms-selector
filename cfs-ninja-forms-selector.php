@@ -3,13 +3,13 @@
 Plugin Name: CFS - Ninja Forms Selector
 Plugin URI: http://wordpress.org/plugins/cfs-ninja-forms-selector/
 Description: Adds a Ninja Forms selector field type.
-Version: 1.0.0
+Version: 1.0.1
 Author: JR Tashjian
 Author URI: http://jrtashjian.com/
 Text Domain: cfsnfs
 License: GPL2
 
-Copyright 2014 JR Tashjian
+Copyright 2014-2018 JR Tashjian
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
