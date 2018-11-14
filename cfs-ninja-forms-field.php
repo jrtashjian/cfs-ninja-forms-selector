@@ -1,12 +1,12 @@
 <?php
 
 class cfs_ninja_forms_field extends cfs_field {
-	function __construct() {
+	public function __construct() {
 		$this->name  = 'ninja_forms_field';
 		$this->label = __( 'Ninja Forms Selector', 'cfsnfs' );
 	}
 
-	function html( $field ) {
+	public function html( $field ) {
 
 		// Simple check to make sure Ninja Forms in fact exists.
 		if ( ! class_exists( 'Ninja_Forms' ) ) {

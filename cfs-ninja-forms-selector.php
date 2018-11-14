@@ -33,11 +33,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 $cfs_ninja_forms_selector = new cfs_ninja_forms_selector();
 
 class cfs_ninja_forms_selector {
-	function __construct() {
+	public function __construct() {
 		add_filter( 'cfs_field_types', [ $this, 'cfs_field_types' ] );
 	}
 
-	function cfs_field_types( $field_types ) {
+	public function cfs_field_types( $field_types ) {
 		$field_types['ninja_forms_field'] = dirname( __FILE__ ) . '/cfs-ninja-forms-field.php';
 
 		return $field_types;
