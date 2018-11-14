@@ -21,7 +21,7 @@ class cfs_ninja_forms_field extends cfs_field {
 		$ninja_forms_listing = Ninja_Forms()->form()->get_forms();
 		?>
 
-		<select name="<?php esc_attr_e( $field->input_name ); ?>" name="<?php esc_attr_e( $field->input_class ); ?>">
+		<select name="<?php esc_attr( $field->input_name ); ?>" name="<?php esc_attr( $field->input_class ); ?>">
 			<option value="0">None</option>
 
 			<?php // Output available forms as options
@@ -31,7 +31,9 @@ class cfs_ninja_forms_field extends cfs_field {
 				$selected = in_array( $form_id, (array) $field->value, true ) ? ' selected' : '';
 				?>
 
-				<option value="<?php esc_attr_e( $form_id ); ?>"<?php echo $selected; ?>><?php esc_attr_e( $form_title ); ?></option>
+				<option value="<?php echo esc_attr( $form_id ); ?>"<?php echo esc_attr( $selected ); ?>>
+					<?php echo esc_attr( $form_title ); ?>
+				</option>
 
 			<?php endforeach; ?>
 
